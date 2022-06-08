@@ -3,32 +3,33 @@ package com.example.moneytransfer.Model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-public class Income {
+public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
-    private Long fromCard;
+    private String username;
+    
+    @Column(nullable = false)
+    private Long cardNumber;
 
     @Column(nullable = false)
-    private Long toCard;
+    private Integer cardPassword;
 
     @Column(nullable = false)
-    private Long amount;
+    private Long balance;
 
-    @CreationTimestamp
     @Column(nullable = false)
-    private Timestamp date;
+    private String expiredDate;
 }

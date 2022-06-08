@@ -1,2 +1,5 @@
-package com.example.moneytransfer.Enums;public class RoleName {
+package com.example.moneytransfer.Enums;
+
+public enum RoleName {
+    ADMIN, USER
 }
