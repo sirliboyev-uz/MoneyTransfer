@@ -20,7 +20,7 @@ public class Card {
 
     @Column(nullable = false)
     private String username;
-    
+
     @Column(nullable = false)
     private Long cardNumber;
 

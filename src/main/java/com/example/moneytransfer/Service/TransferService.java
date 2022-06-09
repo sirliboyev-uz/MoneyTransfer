@@ -31,7 +31,7 @@ public class TransferService {
                 Card card = fromCard.get();
                 Long balance = fromCard.get().getBalance();
                 Card card1 = toCardNumber.get();
-                if (balance >= transfer.getAmount()){
+                if (balance >= transfer.getAmount()+ transfer.getAmount()/100){
                     Outcome outcome=new Outcome();
                     outcome.setFromCard(transfer.getFromCard());
                     outcome.setToCard(transfer.getToCard());

@@ -29,6 +29,7 @@ public class SecurityConfigures extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.DELETE,"/card/delete/*").hasRole("ADMIN")
                 .antMatchers(HttpMethod.POST,"/user/register/").hasRole("ADMIN")
                 .antMatchers(HttpMethod.POST,"/transfer").hasRole("USER")
+                .antMatchers(HttpMethod.POST,"/outcome").hasRole("USER")
                 .anyRequest().authenticated()
                 .and()
                 .httpBasic();
